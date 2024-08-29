@@ -5,7 +5,7 @@ justify-content: center;
 align-items: center;
 height: 100vh;
 margin: 0;
-font-family: Arial, sans-serif;
+font-family: 'Arial', sans-serif;
 background-color: #f8f8f8;
 }
 
@@ -63,10 +63,26 @@ transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 
 .btn:hover {
 background-color: #0056b3;
-transform: translateY(-3px);
+  transform: translateY(-3px);
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 #key-container {
 margin-top: 20px;
+}
+
+.key-text {
+font-family: 'Courier New', Courier, monospace;
+font-size: 18px;
+color: #333;
+background-color: #f0f0f0;
+padding: 10px;
+border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.key-text:hover {
+background-color: #e0e0e0;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
