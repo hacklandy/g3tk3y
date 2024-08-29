@@ -23,6 +23,13 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ad-block:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .ad-block.top, .ad-block.bottom {
@@ -42,12 +49,18 @@ justify-content: center;
 align-items: center;
 }
 
-button {
+.btn {
 padding: 10px 20px;
 font-size: 16px;
 cursor: pointer;
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
-#key-container {
-margin-top: 20px;
-}
+.btn:hover {
+background-color: #0056b3;
+transform: translateY(-3px);
