@@ -21,3 +21,31 @@ alert('Ключ скопирован!');
 });
 
 function showAdVideo() {
+return new Promise((resolve) => {
+const adContainer = document.createElement('div');
+adContainer.id = 'ad-container';
+document.body.appendChild(adContainer);
+
+Ya.adfoxCode.create({
+ownerId: 123456, // Замени на свой ownerId
+containerId: 'ad-container',
+params: {
+p1: 'cmwpa', // Замени на свои параметры
+p2: 'gbyq'
+},
+onRender: () => {
+console.log('Ad rendered');
+},
+onError: (error) => {
+console.error('Ad error:', error);
+resolve();
+},
+onClose: () => {
+console.log('Ad closed');
+document.body.removeChild(adContainer);
+resolve();
+}
+});
+});
+}
+});
