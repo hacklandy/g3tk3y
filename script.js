@@ -16,7 +16,7 @@ keySpan.textContent = key;
 
 copyBtn.addEventListener('click', () => {
 navigator.clipboard.writeText(key).then(() => {
-alert('Ключ скопирован!');
+alert('The key copied!');
 });
 });
 
