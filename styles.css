@@ -1,5 +1,6 @@
 body {
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 height: 100vh;
@@ -9,12 +10,10 @@ background-color: #f8f8f8;
 }
 
 .container {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(3, 1fr);
-gap: 10px;
-width: 80%;
-height: 80%;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
 }
 
 .ad-block {
@@ -23,11 +22,20 @@ border: 1px solid #ccc;
 display: flex;
 justify-content: center;
 align-items: center;
+margin: 10px;
+}
+
+.ad-block.top, .ad-block.bottom {
+width: 100%;
+height: 100px;
+}
+
+.ad-block.left, .ad-block.right {
+width: 200px;
+height: 300px;
 }
 
 .content {
-grid-column: 2 / 3;
-grid-row: 2 / 3;
 display: flex;
 flex-direction: column;
 justify-content: center;
