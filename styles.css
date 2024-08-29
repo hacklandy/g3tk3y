@@ -63,7 +63,7 @@ transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 
 .btn:hover {
 background-color: #0056b3;
-  transform: translateY(-3px);
+transform: translateY(-3px);
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -72,6 +72,7 @@ margin-top: 20px;
 }
 
 .key-text {
+font-family: 'Courier New', Courier, monospace;
 font-size: 18px;
 color: #333;
 background-color: #f0f0f0;
