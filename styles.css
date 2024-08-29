@@ -1,0 +1,35 @@
+body {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+.ad-block {
+width: 200px;
+height: 200px;
+background-color: #f0f0f0;
+border: 1px solid #ccc;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px;
+}
+
+.content {
+width: 100%;
+text-align: center;
+}
+
+button {
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+}
+
+#key-container {
+margin-top: 20px;
+}
