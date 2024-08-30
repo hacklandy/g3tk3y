@@ -1,6 +1,11 @@
+[]
+
+### Обновленный JavaScript (script.js):
+
 document.addEventListener('DOMContentLoaded', () => {
 const urlParams = new URLSearchParams(window.location.search);
-const key = urlParams.get('key');
+const encodedKey = urlParams.get('key');
+const key = atob(encodedKey); // Декодируем ключ из base64
 const continueBtn = document.getElementById('continue-btn');
 const keyContainer = document.getElementById('key-container');
 const keySpan = document.getElementById('key');
@@ -20,10 +25,10 @@ continueBtn.disabled = false;
 
 continueBtn.addEventListener('click', () => {
 console.log('Кнопка продолжить нажата, показываем ключ и пытаемся показать рекламу...');
-showFullscreenAd();
 continueBtn.style.display = 'none';
 keyContainer.style.display = 'block';
 keySpan.textContent = key;
+showFullscreenAd();
 });
 
 copyBtn.addEventListener('click', () => {
