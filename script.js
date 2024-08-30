@@ -19,8 +19,10 @@ continueBtn.disabled = false;
 }, 1000);
 
 continueBtn.addEventListener('click', () => {
-console.log('Кнопка продолжить нажата, пытаемся показать рекламу...');
+console.log('Кнопка продолжить нажата, показываем ключ и пытаемся показать рекламу...');
 continueBtn.style.display = 'none';
+keyContainer.style.display = 'block';
+keySpan.textContent = key;
 showFullscreenAd();
 });
 
@@ -41,14 +43,10 @@ onRender: () => {
 console.log('Реклама отрендерилась');
 },
 onClose: () => {
-console.log('Реклама закрыта, показываем ключ и кнопку скопировать');
-keyContainer.style.display = 'block';
-keySpan.textContent = key;
+console.log('Реклама закрыта');
 },
 onError: (error) => {
 console.error('Ошибка при показе рекламы:', error);
-keyContainer.style.display = 'block';
-keySpan.textContent = key;
 }
 });
 });
