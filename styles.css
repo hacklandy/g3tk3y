@@ -50,15 +50,16 @@ align-items: center;
 }
 
 .btn {
-padding: 10px 20px;
-font-size: 16px;
-cursor: pointer;
-background-color: #007bff;
-color: white;
-border: none;
-border-radius: 5px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  align-self: center; /* Добавлено для центрирования кнопки относительно текста */
 }
 
 .btn:hover {
@@ -74,15 +75,18 @@ flex-direction: column;
 align-items: center;
 }
 
+#key-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .key-text {
-font-family: 'Courier New', Courier, monospace;
-font-size: 18px;
-color: #333;
-background-color: #f0f0f0;
-padding: 10px;
-border-radius: 5px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-transition: background-color 0.3s, box-shadow 0.3s;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px; /* Добавлено для отступа между текстом и кнопкой */
 }
 
 .key-text:hover {
