@@ -20,10 +20,10 @@ continueBtn.disabled = false;
 
 continueBtn.addEventListener('click', () => {
 console.log('Кнопка продолжить нажата, показываем ключ и пытаемся показать рекламу...');
+showFullscreenAd();
 continueBtn.style.display = 'none';
 keyContainer.style.display = 'block';
 keySpan.textContent = key;
-showFullscreenAd();
 });
 
 copyBtn.addEventListener('click', () => {
