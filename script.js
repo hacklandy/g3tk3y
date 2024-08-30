@@ -8,13 +8,13 @@ const copyBtn = document.getElementById('copy-btn');
 
 continueBtn.addEventListener('click', () => {
 continueBtn.style.display = 'none';
-keyContainer.style.display = 'block';
+keyContainer.style.display = 'flex';
 keySpan.textContent = key;
 });
 
 copyBtn.addEventListener('click', () => {
 navigator.clipboard.writeText(key).then(() => {
-alert('Key copied!');
+alert('The key copied!');
 });
 });
 });
