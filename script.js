@@ -7,7 +7,7 @@ const keySpan = document.getElementById('key');
 const copyBtn = document.getElementById('copy-btn');
 
 continueBtn.addEventListener('click', () => {
-showAdVideo().then(() => {
+showFullscreenAd().then(() => {
 continueBtn.style.display = 'none';
 keyContainer.style.display = 'block';
 keySpan.textContent = key;
@@ -20,31 +20,23 @@ alert('The key copied!');
 });
 });
 
-function showAdVideo() {
+function showFullscreenAd() {
 return new Promise((resolve) => {
 const adContainer = document.createElement('div');
-adContainer.id = 'ad-container';
+adContainer.id = 'fullscreen-ad-container';
 document.body.appendChild(adContainer);
 
-Ya.adfoxCode.create({
-ownerId: 123456, // Замени на свой ownerId
-containerId: 'ad-container',
-params: {
-p1: 'cmwpa', // Замени на свои параметры
-p2: 'gbyq'
-},
-onRender: () => {
-console.log('Ad rendered');
-},
-onError: (error) => {
-console.error('Ad error:', error);
-resolve();
-},
-onClose: () => {
-console.log('Ad closed');
+window.yaContextCb.push(() => {
+Ya.Context.AdvManager.render({
+"blockId": "R-A-11786046-4",
+"type": "fullscreen",
+"platform": "touch",
+"renderTo": "fullscreen-ad-container",
+"onClose": () => {
 document.body.removeChild(adContainer);
 resolve();
 }
+});
 });
 });
 }
