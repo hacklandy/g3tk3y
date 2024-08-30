@@ -6,8 +6,8 @@ align-items: center;
 height: 100vh;
 margin: 0;
 font-family: 'Arial', sans-serif;
-background-color: #1e1e1e;
-color: #f8f8f8;
+background-color: #f8f8f8;
+color: #333;
 }
 
 .container {
@@ -18,19 +18,19 @@ width: 100%;
 }
 
 .ad-block {
-background-color: #333;
-border: 1px solid #444;
+background-color: #f0f0f0;
+border: 1px solid #ccc;
 display: flex;
 justify-content: center;
 align-items: center;
 margin: 10px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .ad-block:hover {
 transform: translateY(-5px);
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .ad-block.top, .ad-block.bottom {
@@ -58,15 +58,20 @@ background-color: #007bff;
 color: white;
 border: none;
 border-radius: 5px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 margin-top: 15px;
 }
 
-.btn:hover {
+.btn:disabled {
+background-color: #ccc;
+cursor: not-allowed;
+}
+
+.btn:hover:enabled {
 background-color: #0056b3;
 transform: translateY(-3px);
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 #key-container {
@@ -79,11 +84,11 @@ align-items: center;
 .key-text {
 font-family: 'Courier New', Courier, monospace;
 font-size: 18px;
-color: #f8f8f8;
-background-color: #333;
+color: #333;
+background-color: #f0f0f0;
 padding: 10px;
 border-radius: 5px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 transition: background-color 0.3s, box-shadow 0.3s;
 word-wrap: break-word;
 text-align: center;
@@ -105,5 +110,10 @@ padding: 10px;
 border-radius: 50%;
 background-color: #007bff;
 color: white;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 60px;
+height: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
