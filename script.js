@@ -7,7 +7,7 @@ const keySpan = document.getElementById('key');
 const copyBtn = document.getElementById('copy-btn');
 const timer = document.getElementById('timer');
 
-let countdown = 6;
+let countdown = 17;
 const countdownInterval = setInterval(() => {
 countdown--;
 timer.textContent = countdown;
