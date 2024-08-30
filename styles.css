@@ -59,7 +59,6 @@ border: none;
 border-radius: 5px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-align-self: center; /* Центрирование кнопки относительно текста */
 }
 
 .btn:hover {
@@ -80,4 +79,6 @@ font-family: 'Courier New', Courier, monospace;
 font-size: 18px;
 color: #333;
 margin-bottom: 10px; /* Отступ между текстом и кнопкой */
+word-wrap: break-word; /* Перенос длинных слов */
+text-align: center; /* Центрирование текста */
 }
