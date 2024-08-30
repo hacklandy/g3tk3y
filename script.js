@@ -28,7 +28,7 @@ document.body.appendChild(adContainer);
 
 window.yaContextCb.push(() => {
 Ya.Context.AdvManager.render({
-"blockId": "R-A-11786046-4",
+"blockId": "R-A-11786046-7",
 "type": "fullscreen",
 "platform": "touch",
 "renderTo": "fullscreen-ad-container",
