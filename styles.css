@@ -78,9 +78,19 @@ align-items: center;
 font-family: 'Courier New', Courier, monospace;
 font-size: 18px;
 color: #333;
-margin-bottom: 10px; /* Отступ между текстом и кнопкой */
-word-wrap: break-word; /* Перенос длинных слов */
-text-align: center; /* Центрирование текста */
+margin-bottom: 10px;
+word-wrap: break-word;
+text-align: center;
+background-color: #f0f0f0;
+padding: 10px;
+border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.key-text:hover {
+background-color: #e0e0e0;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .key-wrapper {
